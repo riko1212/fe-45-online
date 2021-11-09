@@ -1,0 +1,47 @@
+.text {
+    width: 200px;
+    height: 200px;
+    border: 10px solid tomato;
+    padding: 10px;
+}
+
+.wrap {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    outline: 1px solid #000;
+    display: flex;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    color: blanchedalmond;
+    font-family: sans-serif;
+    font-size: 50px;
+    border: 1px solid #999999;
+}
+
+.first {
+    background-color: blueviolet;
+    order: 3;
+}
+
+.second {
+    background-color: crimson;
+    align-self: center;
+}
+
+.third {
+    background-color: darkgreen;
+    order: 2;
+}
+
+.fourth {
+    background-color: goldenrod;
+}
+
+.some-list {
+    background-color: tomato;
+    padding: 50px;
+}
