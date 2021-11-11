@@ -11,6 +11,37 @@
     --header-text-color: #ffffff;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
 body {
     font-family: "Open sans", sans-serif;
 }
@@ -35,10 +66,70 @@ body {
     margin: -1px;
 }
 
+.pre-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.after-title {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    min-width: 160px;
+    min-height: 40px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    background-color: transparent;
+}
+
 /* -----------------------HEADER--------------------- */
 
 .header {
     background-color: #555555;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-logo {
+    margin-right: 70px;
+}
+
+.header-list {
+    display: flex;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .header-link {
@@ -54,6 +145,10 @@ body {
     color: var(--accent-color);
 }
 
+.header-connect {
+    margin-left: auto;
+}
+
 .header-tel {
     font-weight: 600;
     font-size: 12px;
@@ -63,18 +158,19 @@ body {
 }
 
 .header-btn {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-
     color: var(--main-btn-color);
+    margin-left: 40px;
 }
 
 /* -----------------------HERO--------------------- */
 
+.hero-container {
+    display: flex;
+}
+
+.hero-list {
+    width: 93px;
+}
 .hero-link {
     font-weight: 600;
     font-size: 11px;
@@ -90,15 +186,13 @@ body {
 
 .hero-right {
     background-color: var(--second-title-color);
+    flex-grow: 1;
+    padding: 272px 0 206px 96px;
 }
 
 .hero-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--second-text-color);
+    margin-bottom: 20px;
 }
 
 .hero-title {
@@ -108,40 +202,46 @@ body {
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: var(--main-title-color);
+    margin-bottom: 20px;
 }
 
 .hero-after-title {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
     color: var(--third-text-color);
+    width: 400px;
 }
 
 /* -----------------------ABOUT--------------------- */
 
+.about {
+    padding-top: 121px;
+    padding-bottom: 130px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+    margin-right: 64px;
+}
+
+.about-item:not(:last-child) {
+    margin-right: 30px;
+}
 .about-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--fourth-text-color);
+    margin-bottom: 20px;
 }
 
 .about-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
+    margin-bottom: 20px;
 }
 
 .about-after-title {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
     color: var(--main-text-color);
+    margin-bottom: 20px;
 }
 
 .about-text {
@@ -149,16 +249,10 @@ body {
     line-height: 1.86;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
+    margin-bottom: 40px;
 }
 
 .about-btn {
-    font-family: inherit;
-    font-weight: 600;
-
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
     color: var(--second-btn-color);
 }
 
@@ -166,24 +260,38 @@ body {
 
 .prices {
     background-color: var(--fourth-text-color);
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 .prices-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--second-text-color);
+    margin-bottom: 20px;
 }
 
 .prices-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-
     color: var(--main-title-color);
+    margin-bottom: 44px;
+}
+
+.prices-wrap {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.prices-list {
+    border: 1px solid #ffffff;
+    width: 50%;
+    padding: 30px 40px;
+}
+
+.prices-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.prices-item:last-child {
+    margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -194,13 +302,9 @@ body {
 }
 
 .prices-btn {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
     color: var(--main-btn-color);
+    margin: 0 auto;
+    display: block;
 }
 
 /* -----------------------REASONS--------------------- */
@@ -223,48 +327,44 @@ body {
 }
 
 .reasons-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--fourth-text-color);
 }
 
 .reasons-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
 }
 
 .reasons-after-title {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
     color: var(--main-text-color);
 }
 
 /* -----------------------MASTERS--------------------- */
 
+.masters {
+    background-color: #f7f7f7;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 .masters-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--fourth-text-color);
+    margin-bottom: 20px;
 }
 
 .masters-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
     color: var(--second-title-color);
+    margin-bottom: 44px;
+}
+
+.masters-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.masters-item {
+    /* flex-basis: calc((100% - 3 * 30px) / 3); */
+    flex-basis: calc(100% / 3 - 30px);
+    margin: 15px;
 }
 
 .masters-item-title {
@@ -273,7 +373,7 @@ body {
     line-height: 1.39;
     text-align: center;
     letter-spacing: 0.02em;
-
+    margin-bottom: 8px;
     color: var(--second-title-color);
 }
 
@@ -285,16 +385,38 @@ body {
     color: var(--accent-color);
 }
 
+.masters-item-bottom {
+    padding-top: 30px;
+}
+
 /* -----------------------GALLERY--------------------- */
 
+.gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 .gallery-pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
     color: var(--fourth-text-color);
+    margin-bottom: 44px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.gallery-item:nth-last-child(-n + 4) {
+    margin-bottom: 0;
 }
 
 /* -----------------------ONLINE--------------------- */
@@ -304,12 +426,6 @@ body {
 }
 
 .online-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-
     color: var(--main-title-color);
 }
 /* -----------------------CONTACTS--------------------- */
@@ -318,12 +434,6 @@ body {
 }
 
 .contacts-title {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-
     color: var(--main-title-color);
 }
 
