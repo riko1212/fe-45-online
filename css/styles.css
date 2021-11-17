@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 10px dashed rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    background-image: url(https://picsum.photos/id/237/200/300);
+    background-repeat: no-repeat;
+    background-position:  top;
+    /* background-size: cover; */
+}
+
+/* .savanna {
+    height: 800px;
+    background-image: url(../img/elephant.png), url(../img/giraffe.png),
+        url(../img/lion.png), url(../img/hepard.png),
+        url(../img/savanna-derevo-solnce-zakat.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom 20px left 600px,
+        bottom 20px left 1000px, bottom 20px left 1500px, center bottom;
+    background-size: auto, auto, auto, auto, auto;
+} */
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.linear,
+.radial {
+    height: 100px;
+}
+
+/* .linear {
+    background-image: linear-gradient(to bottom, yellow 0% 50%, blue 50%);
+} */
+
+/* .radial {
+    background-image: radial-gradient(ellipse, yellow 0% 20%,  blue 20%);
+} */
+
+/* .linear {
+    background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/african-savannah-grass-acacia-baobab-260nw-1103717600.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+} */
+
+.title {
+   font-size: 50px; 
+   display: flex;
+   align-items: center;
+}
+
+.title:hover {
+    color: tomato;
+}
+
+.title:hover::before {
+    color: teal;
+}
+
+.title::before {
+    content: '1.';
+}
+
+.title::after {
+    content: '';
+    width: 4px;
+    height: 40px;
+    background-color: violet;
+    margin-left: 50px;
+
+}
+
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: 0 auto;
+    box-shadow: 5px 5px  
+    
+}
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: crimson;
+    border: none;
+    cursor: pointer;
+   
+}
+.btn:active {
+    box-shadow: inset 2px 2px 5px 2px rgba(47, 48, 58, 0.6);
+}
+
+
+
+
+.square {
+    width: 200px;
+    height: 100px;   
+    background-color: tomato; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;   
+    background-color: tomato; 
+    border-radius: 50%;
+}
+
+.ellipse {
+    width: 200px;
+    height: 100px;   
+    background-color: tomato; 
+    border-radius: 50%;
+}
+
+.radius {
+    width: 200px;
+    height: 100px;   
+    background-color: tomato; 
+    border-radius: 50px 50px 0 0;
+    margin-bottom: 50px;
+}
+
+.triangle {
+    width: 100px;
+    height: 50px;
+    border-top: 25px solid tomato;
+    border-bottom: 25px solid transparent;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+}
