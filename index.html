@@ -18,13 +18,23 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
         <header class="header">
             <div class="container header-container">
                 <nav class="header-navigation">
-                    <a href="" class="header-logo">
+                    <a
+                        href=""
+                        class="
+                            header-logo
+                            animate__animated animate__rubberBand
+                        "
+                    >
                         <svg class="header-logo-icon" width="66" height="55">
                             <use href="./images/icons.svg#icon-logo"></use>
                         </svg>
@@ -34,7 +44,7 @@
                             <a class="link header-link" href="">О нас</a>
                         </li>
                         <li class="header-item">
-                            <a class="link header-link" href=""
+                            <a class="link header-link active" href=""
                                 >Услуги и цены</a
                             >
                         </li>
@@ -50,7 +60,11 @@
                     <a class="header-tel link" href="tel:+380441111111"
                         >+38 044 111 11 11</a
                     >
-                    <button class="header-btn btn" type="button">
+                    <button
+                        class="header-btn btn"
+                        type="button"
+                        data-modal-open
+                    >
                         онлайн-запись
                     </button>
                 </div>
@@ -59,14 +73,16 @@
         <main>
             <section class="hero">
                 <div class="container hero-container">
-                    <ul class="list hero-list">
-                        <li class="hero-item">
-                            <a href="" class="link hero-link">Instagram</a>
-                        </li>
-                        <li class="hero-item">
-                            <a href="" class="link hero-link">Youtube</a>
-                        </li>
-                    </ul>
+                    <div class="hero-left">
+                        <ul class="list hero-list">
+                            <li class="hero-item">
+                                <a href="" class="link hero-link">Instagram</a>
+                            </li>
+                            <li class="hero-item">
+                                <a href="" class="link hero-link">Youtube</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="hero-right">
                         <p class="hero-pre-title pre-title" lang="en">
                             A hair salon for men in Kyiv
@@ -249,12 +265,25 @@
                     <h2 class="masters-title section-title">Наши мастера</h2>
                     <ul class="masters-list list">
                         <li class="masters-item">
-                            <img
-                                src="./images/masters-img1.jpg"
-                                alt="барбер стрижет клиента"
-                                width="370"
-                                height="346"
-                            />
+                            <div class="masters-item-wrap">
+                                <img
+                                    src="./images/masters-img1.jpg"
+                                    alt="барбер стрижет клиента"
+                                    width="370"
+                                    height="346"
+                                />
+                                <p class="masters-item-top-text">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Deleniti blanditiis ipsam
+                                    fugiat ipsum atque quas quis asperiores
+                                    quae, excepturi iusto consectetur sunt,
+                                    quidem eius libero harum neque vero enim
+                                    numquam, at earum assumenda dicta adipisci
+                                    ipsa. Dolores perferendis magnam harum,
+                                    deleniti nihil saepe aliquam aliquid
+                                    nesciunt recusandae accusamus! Illum, quas?
+                                </p>
+                            </div>
                             <div class="masters-item-bottom">
                                 <h3 lang="en" class="masters-item-title">
                                     John Smith
@@ -332,6 +361,60 @@
                                 <p lang="en" class="masters-item-text">
                                     Extreme Barber
                                 </p>
+                                <ul class="masters-social-list list">
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-instagram"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-twitter"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-facebook"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-linkedin"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         <li class="masters-item">
@@ -348,6 +431,60 @@
                                 <p lang="en" class="masters-item-text">
                                     Extreme Barber
                                 </p>
+                                <ul class="masters-social-list list">
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-instagram"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-twitter"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-facebook"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="masters-social-item">
+                                        <a href="" class="masters-social-link">
+                                            <svg
+                                                class="masters-social-icon"
+                                                width="20"
+                                                height="20"
+                                            >
+                                                <use
+                                                    href="./images/icons.svg#icon-linkedin"
+                                                ></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -486,5 +623,15 @@
                 </li>
             </ul>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>
+                    <svg class="modal-close-icon" width="18" height="18">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
