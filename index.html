@@ -564,41 +564,73 @@
                     </ul>
                 </div>
             </section>
-            <section class="online">
-                <h2 class="online-title section-title">Онлайн-запись</h2>
-            </section>
-            <section class="contacts">
-                <h2 class="contacts-title section-title">Контакты</h2>
-                <address class="contacts-address">
-                    <ul class="contacts-list list">
-                        <li class="contacts-item">
-                            <a
-                                class="contacts-link link"
-                                href="https://goo.gl/maps/CozV7swrPdvsMqnH9"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >ул. Васильковая, 7А Киев, 08132</a
-                            >
-                        </li>
-                        <li class="contacts-item">
-                            <a
-                                class="contacts-link link"
-                                href="tel:+380441111111"
-                                >+38 044 111 11 11</a
-                            >
-                        </li>
-                        <li class="contacts-item">
-                            <a
-                                class="contacts-link"
-                                href="mailto:barbershop@email.com"
-                                >barbershop@email.com</a
-                            >
-                        </li>
-                    </ul>
-                </address>
-                <p class="contacts-bottom-title">время работы</p>
-                <p class="contacts-bottom-text">Ежедневно с 9:00 до 22:00</p>
-            </section>
+            <div class="contact-wrap">
+                <div class="container">
+                    <section class="online">
+                        <h2 class="online-title section-title">
+                            Онлайн-запись
+                        </h2>
+                        <form action="#" class="online-form">
+                            <div class="online-form-wrap">
+                                <input
+                                    type="text"
+                                    class="online-input"
+                                    name="online-name"
+                                    placeholder="Имя*"
+                                />
+                                <input
+                                    type="tel"
+                                    class="online-input"
+                                    name="online-tel"
+                                    placeholder="Телефон*"
+                                />
+                            </div>
+                            <textarea
+                                name="online-text"
+                                class="online-text"
+                                placeholder="сообщение"
+                            ></textarea>
+                            <button type="submit" class="btn online-btn">
+                                отправить
+                            </button>
+                        </form>
+                    </section>
+                    <section class="contacts">
+                        <h2 class="contacts-title section-title">Контакты</h2>
+                        <address class="contacts-address">
+                            <ul class="contacts-list list">
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link link"
+                                        href="https://goo.gl/maps/CozV7swrPdvsMqnH9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >ул. Васильковая, 7А Киев, 08132</a
+                                    >
+                                </li>
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link link"
+                                        href="tel:+380441111111"
+                                        >+38 044 111 11 11</a
+                                    >
+                                </li>
+                                <li class="contacts-item">
+                                    <a
+                                        class="contacts-link"
+                                        href="mailto:barbershop@email.com"
+                                        >barbershop@email.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </address>
+                        <p class="contacts-bottom-title">время работы</p>
+                        <p class="contacts-bottom-text">
+                            Ежедневно с 9:00 до 22:00
+                        </p>
+                    </section>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <p class="footer-copy">&#169;Copyright 2020</p>
@@ -638,41 +670,61 @@
                         <label class="form-input-text" for="user-name"
                             >Введите имя
                         </label>
-                        <input
-                            type="text"
-                            value="Mr."
-                            id="user-name"
-                            name="user-name"
-                            class="modal-form-input"
-                            required
-                            minlength="2"
-                            placeholder="John"
-                        />
+                        <div class="input-wrap">
+                            <input
+                                type="text"
+                                id="user-name"
+                                name="user-name"
+                                class="modal-form-input"
+                                required
+                                minlength="2"
+                                placeholder="John"
+                            />
+                            <svg class="input-icon" width="18" height="18">
+                                <use
+                                    href="./images/icons.svg#icon-email-black"
+                                ></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="modal-field">
                         <label for="user-email" class="form-input-text"
                             >Введите почту</label
                         >
-                        <input
-                            type="email"
-                            id="user-email"
-                            name="user-email"
-                            class="modal-form-input"
-                            placeholder="test@mail.ua"
-                        />
+                        <div class="input-wrap">
+                            <input
+                                type="email"
+                                id="user-email"
+                                name="user-email"
+                                class="modal-form-input"
+                                placeholder="test@mail.ua"
+                            />
+                            <svg class="input-icon" width="18" height="18">
+                                <use
+                                    href="./images/icons.svg#icon-email-black"
+                                ></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="modal-field">
                         <label for="user-tel" class="form-input-text"
                             >Введите телефон</label
                         >
-                        <input
-                            type="tel"
-                            name="user-tel"
-                            id="user-tel"
-                            class="modal-form-input"
-                            placeholder="Введите телефон"
-                            required
-                        />
+                        <div class="input-wrap">
+                            <input
+                                type="tel"
+                                name="user-tel"
+                                id="user-tel"
+                                class="modal-form-input"
+                                placeholder="Введите телефон"
+                                required
+                            />
+                            <svg class="input-icon" width="18" height="18">
+                                <use
+                                    href="./images/icons.svg#icon-email-black"
+                                ></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="modal-field">
                         <label for="user-text" class="form-input-text"
@@ -685,41 +737,31 @@
                             placeholder="Коммент"
                         ></textarea>
                     </div>
-                    <fieldset>
-                        <legend>Gender</legend>
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" value="male" />
-                        <label for="female">Female</label>
-                        <input type="radio" name="gender" value="female" />
-                    </fieldset>
-                    <fieldset>
-                        <legend>Hobby</legend>
-                        <label for="boxing">boxing</label>
-                        <input type="checkbox" name="hobby" value="boxing" />
-                        <label for="reading">reading</label>
+                    <div class="modal-field">
                         <input
                             type="checkbox"
-                            checked
-                            name="hobby"
-                            value="reading"
+                            name="policy"
+                            id="policy"
+                            class="modal-check visually-hidden"
                         />
-                        <label for="swimming">swimming</label>
-                        <input type="checkbox" name="hobby" value="swimming" />
-                    </fieldset>
-                    <label for="city">Город</label>
-                    <select class="modal-form-input" id="city" name="city">
-                        <option value="Paris">Paris</option>
-                        <option value="London">London</option>
-                        <option value="Noviy Rozdil" selected>
-                            Noviy Rozdil
-                        </option>
-                    </select>
-                    <button type="submit">Кнопка</button>
+                        <label for="policy" class="check-text">
+                            <span class="check-item">
+                                <svg class="check-icon" width="11" height="8">
+                                    <use
+                                        href="./images/icons.svg#icon-check"
+                                    ></use>
+                                </svg>
+                            </span>
+                            Важный текст про политику пользования
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn modal-btn">Кнопка</button>
                 </form>
             </div>
         </div>
 
-        user-name=dewdew &user-email=dwedwe &user-tel=dwedwe#
+        u
         <!-- <script src="./js/modal.js"></script> -->
     </body>
 </html>

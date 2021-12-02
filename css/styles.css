@@ -647,18 +647,103 @@ body {
     margin-bottom: 0;
 }
 
+.contact-wrap {
+    background-color: #191c26;
+}
+
+.contact-wrap .container {
+    display: flex;
+}
+
 /* -----------------------ONLINE--------------------- */
 
 .online {
-    background-color: var(--fourth-text-color);
+    width: calc(50% + 15px);
+    padding-top: 130px;
+    padding-bottom: 130px;
+    padding-right: 40px;
 }
 
 .online-title {
     color: var(--main-title-color);
+    margin-bottom: 44px;
+}
+
+.online-input {
+    width: 270px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    outline: none;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: border-color 300ms linear;
+}
+
+.online-input + .online-input {
+    width: 260px;
+}
+
+.online-input:focus,
+.online-text:focus {
+    border-color: #ffffff;
+}
+
+.online-input:focus::placeholder,
+.online-text:focus::placeholder {
+    color: #ffffff;
+}
+
+.online-text {
+    width: 100%;
+    height: 76px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    outline: none;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: border-color 300ms linear;
+    margin-bottom: 44px;
+}
+
+.online-input::placeholder {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--second-text-color);
+    transition: color 300ms linear;
+}
+
+.online-form-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.online-btn {
+    color: var(--main-btn-color);
 }
 /* -----------------------CONTACTS--------------------- */
 .contacts {
-    background-color: var(--fourth-text-color);
+    width: calc(50% - 15px);
+    padding-top: 130px;
+    padding-bottom: 130px;
+    padding-left: 100px;
+    background-image: url(../images/bg-contacts.png);
+
+    background-position: right;
 }
 
 .contacts-title {
@@ -772,16 +857,37 @@ body {
     margin-bottom: 10px;
 }
 
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 300ms linear;
+}
+
 .modal-form-input {
     width: 100%;
     height: 50px;
     border: 1px solid #999999;
     border-radius: 4px;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-right: 15px;
     color: var(--main-text-color);
     font-weight: 600;
     outline: none;
+    transition: border-color 300ms linear;
+}
+
+.modal-form-input:focus {
+    border-color: var(--accent-color);
+}
+
+.modal-form-input:focus + .input-icon {
+    fill: var(--accent-color);
 }
 
 .modal-form-text {
@@ -800,12 +906,12 @@ body {
     opacity: 0.5;
 }
 
-.modal-form-input:placeholder-shown {
+/* .modal-form-input:placeholder-shown {
     border-color: red;
 }
 .modal-form-input:not(:placeholder-shown) {
     border-color: green;
-}
+} */
 
 .form-input-text {
     font-size: 14px;
@@ -814,3 +920,94 @@ body {
     margin-bottom: 5px;
     display: block;
 }
+
+.modal-btn {
+    display: block;
+    margin: 0 auto;
+    color: var(--second-btn-color);
+}
+
+.check-text {
+    font-size: 14px;
+    color: var(--main-text-color);
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+/* ---------------------Через before -----------*/
+
+/* .check-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.modal-check:checked + .check-text::before {
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+} */
+
+/* --------------------- -----------*/
+
+/* ---------------------Через спрайт -----------*/
+
+.check-item {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon {
+    fill: #ffffff;
+}
+
+.modal-check:checked + .check-text .check-item {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+/* ------------------- -----------*/
+
+/* .check-text::before {
+    content: "";
+    width: 40px;
+    height: 22px;
+    border-radius: 50px;
+    border: 1px solid #999999;
+    margin-right: 7px;
+    transition: background-color 300ms linear;
+}
+
+.check-text::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgb(159, 161, 161);
+    left: 2px;
+    top: 2px;
+
+    transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::after {
+    transform: translate(18px);
+    background-color: #ffffff;
+}
+
+.modal-check:checked + .check-text::before {
+    background-color: rgb(127, 216, 127);
+} */
