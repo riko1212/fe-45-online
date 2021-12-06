@@ -1,0 +1,29 @@
+.gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.gallery-pre-title {
+    color: var(--fourth-text-color);
+    margin-bottom: 44px;
+}
+
+.gallery-pre-title::before {
+    background-color: var(--fourth-text-color);
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+    &:nth-last-child(-n + 4) {
+        margin-bottom: 0;
+    }
+}

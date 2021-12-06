@@ -1,0 +1,129 @@
+.masters {
+    background-color: #f7f7f7;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.masters-pre-title {
+    color: var(--fourth-text-color);
+    margin-bottom: 20px;
+    
+}
+
+
+
+.masters-title {
+    color: var(--second-title-color);
+    margin-bottom: 44px;
+}
+
+.masters-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.masters-item {
+    /* flex-basis: calc((100% - 3 * 30px) / 3); */
+    flex-basis: calc(100% / 3 - 30px);
+    margin: 15px;
+}
+
+.masters-item:hover .masters-item-top-text {
+    transform: translateY(0);
+}
+
+.masters-item-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.39;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    color: var(--second-title-color);
+}
+
+.masters-item-text {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.masters-item-bottom {
+    padding-top: 30px;
+}
+
+.masters-social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.masters-social-item {
+    width: 44px;
+    height: 44px;
+}
+
+.masters-social-item + .masters-social-item {
+    margin-left: 10px;
+}
+
+.masters-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+        background-color: teal;
+        color: var(--accent-color);
+    }
+}
+
+.masters-social-icon {
+    fill: currentColor;
+}
+
+
+
+/* .masters-social-link:hover .masters-social-icon,
+.masters-social-link:focus .masters-social-icon {
+    fill: var(--accent-color);
+} */
+
+.masters-item-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.masters-item-top-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 106, 0, 0.794);
+    padding: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow: auto;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 300ms linear;
+    .masters-item:hover & {
+        transform: translateY(0);
+    }
+    &::-webkit-scrollbar {
+    width: 7px;
+    background-color: green;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #223c50;
+    }
+}
+

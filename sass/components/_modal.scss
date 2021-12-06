@@ -1,0 +1,226 @@
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    transition: opacity 1000ms, visibility 1000ms;
+}
+
+.backdrop.is-hidden {
+    .modal {
+        transform: scale(1.5) rotate(180deg) translate(1000px);
+        transition: transform 1000ms;
+    }
+
+} 
+
+.modal {
+    width: 500px;
+    min-height: 600px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    transform: scale(1) rotate(0);
+    transform: translate(-50%, -50%);
+    transition: transform 1000ms;
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-title {
+    font-size: 18px;
+    color: var(--second-title-color);
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 300ms linear;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    padding-left: 30px;
+    padding-right: 15px;
+    color: var(--main-text-color);
+    font-weight: 600;
+    outline: none;
+    transition: border-color 300ms linear;
+    &:focus {
+        border-color: var(--accent-color);
+    }
+    &:focus + .input-icon {
+        fill: var(--accent-color);
+    }
+    ::placeholder {
+        font-weight: 400;
+        color: var(--accent-color);
+        opacity: 0.5;
+    }
+}
+
+
+
+
+.modal-form-text {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    resize: none;
+    padding: 10px;
+    &::placeholder {
+        font-weight: 400;
+        color: var(--accent-color);
+        opacity: 0.5;
+    }
+}
+
+
+
+/* .modal-form-input:placeholder-shown {
+    border-color: red;
+}
+.modal-form-input:not(:placeholder-shown) {
+    border-color: green;
+} */
+
+.form-input-text {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #999999;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-btn {
+    display: block;
+    margin: 0 auto;
+    color: var(--second-btn-color);
+}
+
+.check-text {
+    font-size: 14px;
+    color: var(--main-text-color);
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+/* ---------------------Через before -----------*/
+
+/* .check-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.modal-check:checked + .check-text::before {
+    background-image: url(../images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+} */
+
+/* --------------------- -----------*/
+
+/* ---------------------Через спрайт -----------*/
+
+.check-item {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon {
+    fill: #ffffff;
+}
+
+.modal-check:checked + .check-text {
+    .check-item {
+        background-color: var(--accent-color);
+        border: none;
+    }
+} 
+
+/* ------------------- -----------*/
+
+/* .check-text::before {
+    content: "";
+    width: 40px;
+    height: 22px;
+    border-radius: 50px;
+    border: 1px solid #999999;
+    margin-right: 7px;
+    transition: background-color 300ms linear;
+}
+
+.check-text::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgb(159, 161, 161);
+    left: 2px;
+    top: 2px;
+
+    transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::after {
+    transform: translate(18px);
+    background-color: #ffffff;
+}
+
+.modal-check:checked + .check-text::before {
+    background-color: rgb(127, 216, 127);
+} */
