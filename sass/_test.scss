@@ -36,15 +36,14 @@
 }
 
 .title {
+  @include font($fw: 400);
+
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
 
   margin: 0;
 
   text-align: center;
-  letter-spacing: 0.03em;
 
   color: #212121;
 }
@@ -52,4 +51,31 @@
 .our-work__title,
 .our-team__title {
   margin-bottom: 50px;
+}
+
+.menu__link {
+  @include font($fs: 14px);
+
+  font-style: normal;
+
+  color: #212121;
+}
+
+.menu__link--active {
+  color: #2196f3;
+}
+
+.button {
+  @include font();
+}
+
+// TEst
+
+.menu__list {
+}
+.menu__item {
+}
+.menu__link {
+}
+.menu__link--active {
 }
