@@ -23,3 +23,5 @@
   ```json
   "editor.fontFamily": "Hack",
   ```
+
+### 📌 [Ссылка на миксин](./sass/_mixins.scss) 📌
