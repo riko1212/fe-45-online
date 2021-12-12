@@ -38,8 +38,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
 }
 
@@ -175,8 +174,7 @@
     border: 2px solid #000000;
     border-radius: 2px;
     margin-right: 5px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
 }
 
@@ -184,8 +182,8 @@
     fill: #ffffff;
 }
 
-.modal-check:checked + .check-text {
-    .check-item {
+.modal-check {
+    &:checked + .check-text .check-item {
         background-color: var(--accent-color);
         border: none;
     }

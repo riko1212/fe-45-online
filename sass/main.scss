@@ -1,4 +1,7 @@
 @import './utils/vars';
+@import './utils/placeholders';
+// mixin
+@import './utils/mixins';
 @import './base/reset';
 @import './base/common';
 @import './utils/hidden'; 

@@ -1,11 +1,12 @@
 .pre-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    // font-weight: 600;
+    // font-size: 11px;
+    // line-height: 1.36;
+    // letter-spacing: 0.1em;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
+    @include font(11px, 600, 1.36, 0.1em);
+
+    @extend %align-list;
     &::before {
         content: "";
         width: 63px;
@@ -13,5 +14,23 @@
 
         margin-right: 21px;
     }
+}
+
+.pre-title--color-dark {
+     color: var(--fourth-text-color);
+}
+
+.pre-title--color-dark::before {
+    color: var(--fourth-text-color);
+    
+}
+
+.pre-title--color-light {
+     color: var(--second-text-color);
+}
+
+.pre-title--color-light::before {
+     color: var(--second-text-color);
+    
 }
 
