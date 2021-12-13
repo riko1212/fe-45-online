@@ -3,10 +3,14 @@
     background-image: url(../images/prices-bg.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 
-    padding-top: 130px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    @media screen and (min-width: 1200px)  {
+            padding-top: 130px;
     padding-bottom: 130px;
+    }
 }
 .prices-pre-title {
     color: var(--second-text-color);
@@ -23,21 +27,48 @@
 }
 
 .prices-wrap {
-    display: flex;
+    // display: flex;
     margin-bottom: 50px;
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    @media screen and (min-width: 1200px) {
+        background: none;
+        display: flex;
+    }
 }
 
 .prices-list {
-    width: 50%;
-    padding: 30px 40px;
+    // width: 50%;
+    width: 100%;
+    padding: 20px;
+    @media screen and (min-width: 480px) {
+        padding: 30px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 30px 40px;
+    }
+     @media screen and (min-width: 1200px) {
+        width: 50%;
+    } 
 }
 
 .prices-list-dark {
-    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    // background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    padding-top: 0;
+    @media screen and (min-width: 1200px) {
+        padding-top: 30px;
+        background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
 }
 
 .prices-list-light {
-    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    // background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
+        margin-bottom: unset;
+        background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
 }
 
 .prices-item-count {
@@ -64,10 +95,19 @@
 }
 
 .prices-item-text {
-    font-size: 18px;
-    line-height: 1.67;
+    // font-size: 18px;
+    // line-height: 1.67;
+    font-size: 12px;
+    line-height: 2.14;
     letter-spacing: 0.02em;
     color: var(--third-text-color);
+    @media screen and (min-width: 480px) {
+        font-size: 14px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+    line-height: 1.67;
+    }
 }
 
 .prices-btn {

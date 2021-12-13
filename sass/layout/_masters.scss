@@ -1,7 +1,20 @@
 .masters {
     background-color: #f7f7f7;
-    padding-top: 130px;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    @media screen and (min-width: 1200px)  {
+            padding-top: 130px;
     padding-bottom: 130px;
+    }
+    .container {
+        @media screen and (min-width: 768px) {
+            width: 480px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 1200px;
+        }
+    }
 }
 .masters__pre-title {
     margin-bottom: 20px;
@@ -18,15 +31,35 @@
 }
 
 .masters-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -15px;
+    margin-bottom: -30px;
+    @media screen and (min-width: 768px)  {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
 }
 
 .masters-list__item {
     /* flex-basis: calc((100% - 3 * 30px) / 3); */
-    flex-basis: calc(100% / 3 - 30px);
-    margin: 15px;
+    // flex-basis: calc(100% / 3 - 30px);
+    // margin: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+    //  @media screen and (min-width: 768px)  {
+    //     flex-basis: calc(100% / 2 - 30px);
+    //     margin-left: 30px;
+    // }
+    @media screen and (min-width: 1200px)  {
+        flex-basis: calc(100% / 3 - 30px);
+        margin-left: 30px;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 // .masters-item:hover .masters-item-top-text {
