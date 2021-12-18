@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body>
-        <!-- <header class="header">
+        <header class="header">
             <div class="container header-container">
                 <nav class="header-navigation">
                     <a
@@ -68,10 +68,66 @@
                         онлайн-запись
                     </button>
                 </div>
+                <button type="button" class="open-menu-btn">O</button>
             </div>
-        </header> -->
+            <div class="mob-menu is-hidden">
+                <div class="container">
+                    <div class="mob-menu-top">
+                        <button type="button" class="close-menu-btn">X</button>
+                        <ul class="list mob-menu-list">
+                            <li class="mob-menu-item">
+                                <a class="link mob-menu-link" href="">О нас</a>
+                            </li>
+                            <li class="mob-menu-item">
+                                <a class="link mob-menu-link active" href=""
+                                    >Услуги и цены</a
+                                >
+                            </li>
+                            <li class="mob-menu-item">
+                                <a class="link mob-menu-link" href=""
+                                    >Мастера</a
+                                >
+                            </li>
+                            <li class="mob-menu-item">
+                                <a class="link mob-menu-link" href=""
+                                    >Контакты</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mob-menu-bottom">
+                        <div class="mob-menu-connect">
+                            <a
+                                class="mob-menu-tel link"
+                                href="tel:+380441111111"
+                                >+38 044 111 11 11</a
+                            >
+                            <button
+                                class="mob-menu-btn btn"
+                                type="button"
+                                data-modal-open
+                            >
+                                онлайн-запись
+                            </button>
+                        </div>
+                        <ul class="list mob-social-list">
+                            <li class="mob-social-item">
+                                <a href="" class="link mob-social-link"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="mob-social-item">
+                                <a href="" class="link mob-social-link"
+                                    >Youtube</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main>
-            <!-- <section class="hero">
+            <section class="hero">
                 <div class="container hero-container">
                     <div class="hero-left">
                         <ul class="list hero-list">
@@ -94,7 +150,7 @@
                         </p>
                     </div>
                 </div>
-            </section> -->
+            </section>
             <!-- <section class="about">
                 <div class="container about-container">
                     <ul class="about-list list">
@@ -527,20 +583,62 @@
                     <h2 class="visually-hidden">Галерея</h2>
                     <ul class="gallery-list list">
                         <li class="gallery-item">
-                            <img
-                                src="./images/gallery-img1.jpg"
-                                alt="барбер стрижет клиента"
-                                width="270"
-                                height="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery-img1.jpg    1x,
+                                        ./images/gallery-img1-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery-img1-tab.jpg    1x,
+                                        ./images/gallery-img1-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery-img1-mob.jpg    1x,
+                                        ./images/gallery-img1-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    src="./images/gallery-img1.jpg"
+                                    alt="барбер стрижет клиента"
+                                />
+                            </picture>
                         </li>
                         <li class="gallery-item">
-                            <img
-                                src="./images/gallery-img2.jpg"
-                                alt="барбер стрижет клиента"
-                                width="270"
-                                height="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/gallery-img2.jpg    1x,
+                                        ./images/gallery-img2-2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery-img2-tab.jpg    1x,
+                                        ./images/gallery-img2-tab-2x.jpg 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/gallery-img2-mob.jpg    1x,
+                                        ./images/gallery-img2-mob-2x.jpg 2x
+                                    "
+                                    media="(min-width: 320px)"
+                                />
+                                <img
+                                    src="./images/gallery-img2.jpg"
+                                    alt="барбер стрижет клиента"
+                                />
+                            </picture>
                         </li>
                         <li class="gallery-item">
                             <img
@@ -791,5 +889,6 @@
         </div>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>

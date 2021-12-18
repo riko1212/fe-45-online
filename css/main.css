@@ -380,7 +380,7 @@ body {
 }
 
 .header-list {
-  display: flex;
+  display: none;
 }
 
 .header-item:not(:last-child) {
@@ -414,6 +414,7 @@ body {
 
 .header-connect {
   margin-left: auto;
+  display: none;
 }
 
 .header-tel {
@@ -429,13 +430,87 @@ body {
   margin-left: 40px;
 }
 
+.open-menu-btn {
+  margin-left: auto;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.mob-menu .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-menu-bottom {
+  margin-top: auto;
+}
+
+.close-menu-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-menu-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-menu-connect {
+  margin-bottom: 64px;
+}
+
+.mob-menu-tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 24px;
+  color: #303030;
+}
+
+.mob-social-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mob-social-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
 .hero-container {
   display: flex;
+  width: 100%;
+  padding: 0;
 }
 
 .hero-left {
   width: 93px;
-  display: flex;
+  display: none;
   align-items: flex-end;
   padding-left: 23px;
   padding-bottom: 40px;
@@ -480,7 +555,7 @@ body {
   background-position: center;
   background-size: cover;
   flex-grow: 1;
-  padding: 272px 0 206px 96px;
+  padding: 208px 0 183px 31px;
 }
 
 .hero-pre-title {
@@ -495,8 +570,8 @@ body {
 .hero-title {
   font-family: Raleway;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 48px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: 20px;
@@ -504,7 +579,6 @@ body {
 
 .hero-after-title {
   color: var(--third-text-color);
-  width: 400px;
 }
 
 .about {
@@ -559,7 +633,7 @@ body {
 
 .prices {
   background-color: #111319;
-  background-image: url(../images/prices-bg.png);
+  background-image: url(../images/prices-bg-mob.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -567,10 +641,35 @@ body {
   padding-bottom: 84px;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices-bg-mob-2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .prices {
+    background-image: url(../images/prices-bg-tab.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices-bg-tab-2x.png);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .prices {
     padding-top: 130px;
     padding-bottom: 130px;
+    background-image: url(../images/prices-bg.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .prices {
+    background-image: url(../images/prices-bg-2x.png);
   }
 }
 

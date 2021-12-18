@@ -1,10 +1,12 @@
 .hero-container {
     display: flex;
+    width: 100%;
+    padding: 0;
 }
 
 .hero-left {
     width: 93px;
-    display: flex;
+    display: none;
     align-items: flex-end;
     padding-left: 23px;
     padding-bottom: 40px;
@@ -55,7 +57,7 @@
     background-position: center;
     background-size: cover;
     flex-grow: 1;
-    padding: 272px 0 206px 96px;
+    padding: 208px 0 183px 31px;
 }
 
 .hero-pre-title {
@@ -71,8 +73,8 @@
 .hero-title {
     font-family: Raleway;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 1.18;
+    font-size: 48px;
+    line-height: 1.17;
     letter-spacing: 0.05em;
     color: var(--main-title-color);
     margin-bottom: 20px;
@@ -80,5 +82,5 @@
 
 .hero-after-title {
     color: var(--third-text-color);
-    width: 400px;
+    // width: 400px;
 }
